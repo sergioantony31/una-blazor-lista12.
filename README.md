@@ -15,7 +15,7 @@
 **Nome:** Miguel Oliveira Silva – RA: 326128330 
 **Curso:** (Analise e Desenvolvimento de Sistemas) 
 
-**Nome:**Arthur Carvalho Oliveira – RA: 32611916 
+**Nome:** Arthur Carvalho Oliveira – RA: 32611916 
 **Curso:** (Analise e Desenvolvimento de Sistemas) 
 
 ---
