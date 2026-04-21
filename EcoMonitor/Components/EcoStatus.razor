@@ -1,0 +1,44 @@
+<div class="eco-card @CardClasse">
+
+    <h5>@Titulo</h5>
+
+    <p>Pontos por ação: <strong>@Peso</strong></p>
+
+    <p>Total acumulado:</p>
+    <span class="badge">@Total</span>
+
+    <button class="@BotaoClasse" @onclick="Incrementar">
+        Registrar Atividade
+    </button>
+
+    @if (Total >= 100)
+    {
+        <p class="meta-msg">
+            🏆 Meta batida! <br />
+            Você é um Herói do Planeta!
+        </p>
+    }
+
+</div>
+
+@code {
+    [Parameter]
+    public string Titulo { get; set; } = string.Empty;
+
+    [Parameter]
+    public int Peso { get; set; }
+
+    private int Total = 0;
+    private bool clicado = false;
+
+    private void Incrementar()
+    {
+        Console.WriteLine("CLICOU!");
+        Total += Peso;
+        clicado = true;
+        StateHasChanged(); // 🔥 garante atualização
+    }
+
+    private string CardClasse => Total >= 100 ? "card-meta" : "";
+    private string BotaoClasse => clicado ? "btn-ativo" : "btn-normal";
+}

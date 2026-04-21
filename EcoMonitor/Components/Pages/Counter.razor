@@ -1,0 +1,18 @@
+﻿@page "/counter"
+
+<h1>🌍 EcoCounter Global</h1>
+
+<p>Pontos globais: <strong>@currentCount</strong></p>
+
+<button class="btn btn-success" @onclick="IncrementCount">
+    ➕ Adicionar impacto global
+</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount += 5;
+    }
+}
